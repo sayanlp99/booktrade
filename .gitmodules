@@ -1,0 +1,6 @@
+[submodule "booktrade_frontend"]
+	path = booktrade_frontend
+	url = https://github.com/sayanlp99/booktrade_frontend.git
+[submodule "booktrade_backend"]
+	path = booktrade_backend
+	url = https://github.com/sayanlp99/booktrade_backend.git
