@@ -1,0 +1,1481 @@
+{
+	"info": {
+		"_postman_id": "b7708cb3-e35b-444b-8733-48c640943cf4",
+		"name": "booktrade-backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30991332"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Registration",
+					"item": [
+						{
+							"name": "User Email verification",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"email\": \"sayan.chakraborty1999@gmail.com\" }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{root_url}}api/auth/sendEmailOtp",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"auth",
+										"sendEmailOtp"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "User registration",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"name\":\"1\", \"phone_number\":\"2\", \"company_name\":\"3\", \"address\":\"4\", \"district\":\"5\", \"state\":\"6\", \"pin_code\":\"7\" }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://140.238.146.59/api/v0/app/registerUser",
+											"protocol": "http",
+											"host": [
+												"140",
+												"238",
+												"146",
+												"59"
+											],
+											"path": [
+												"api",
+												"v0",
+												"app",
+												"registerUser"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "50"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"32-onOFEzbs6bH7AiNdypDQbPHcO1M\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 01 Mar 2023 07:20:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"User ${userId} created successfully.\"\n}"
+								}
+							]
+						},
+						{
+							"name": "Verify User Otp",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"uuid\":\"9ca5f24c-61f6-46d6-ac42-9d1708c4a252\",\"otp\":\"333009\"}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{root_url}}api/auth/verifyEmailOtp",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"auth",
+										"verifyEmailOtp"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User registration",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"uuid\": \"9ca5f24c-61f6-46d6-ac42-9d1708c4a252\",\r\n    \"username\": \"sayanc\",\r\n    \"full_name\": \"Sayan C\",\r\n    \"email\": \"sayan.chakraborty1999@gmail.com\",\r\n    \"password\": \"0987654321\",\r\n    \"reading_preferences\":\"story\",\r\n    \"favorite_genres\":\"thriller,comedy\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{root_url}}api/auth/registerUser",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"auth",
+										"registerUser"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "User registration",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\"name\":\"1\", \"phone_number\":\"2\", \"company_name\":\"3\", \"address\":\"4\", \"district\":\"5\", \"state\":\"6\", \"pin_code\":\"7\" }",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "http://140.238.146.59/api/v0/app/registerUser",
+											"protocol": "http",
+											"host": [
+												"140",
+												"238",
+												"146",
+												"59"
+											],
+											"path": [
+												"api",
+												"v0",
+												"app",
+												"registerUser"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "50"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"32-onOFEzbs6bH7AiNdypDQbPHcO1M\""
+										},
+										{
+											"key": "Date",
+											"value": "Wed, 01 Mar 2023 07:20:18 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"message\": \"User ${userId} created successfully.\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"sayanc\",\r\n    \"password\": \"0987654321\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{root_url}}api/auth/login",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://140.238.146.59/api/v0/app/checkUser",
+									"protocol": "http",
+									"host": [
+										"140",
+										"238",
+										"146",
+										"59"
+									],
+									"path": [
+										"api",
+										"v0",
+										"app",
+										"checkUser"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-zM34MxBsQ1Hk15V/6EaJBcRPOgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Mar 2023 07:19:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"user_present\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Reset password",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"sayan.chakraborty1999@gmail.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{root_url}}api/auth/forgetPasswordOtp",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"auth",
+								"forgetPasswordOtp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://140.238.146.59/api/v0/app/checkUser",
+									"protocol": "http",
+									"host": [
+										"140",
+										"238",
+										"146",
+										"59"
+									],
+									"path": [
+										"api",
+										"v0",
+										"app",
+										"checkUser"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-zM34MxBsQ1Hk15V/6EaJBcRPOgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Mar 2023 07:19:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"user_present\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Reset password Verify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"uuid\": \"460a2e69-c49b-438a-8525-f0cae11ff114\", \"otp\" : \"971949\", \"password\": \"1234567890\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{root_url}}api/auth/forgetPasswordChangePassword",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"auth",
+								"forgetPasswordChangePassword"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://140.238.146.59/api/v0/app/checkUser",
+									"protocol": "http",
+									"host": [
+										"140",
+										"238",
+										"146",
+										"59"
+									],
+									"path": [
+										"api",
+										"v0",
+										"app",
+										"checkUser"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-zM34MxBsQ1Hk15V/6EaJBcRPOgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Mar 2023 07:19:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"user_present\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Check User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{root_url}}api/auth/checkUserToken",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"auth",
+								"checkUserToken"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://140.238.146.59/api/v0/app/checkUser",
+									"protocol": "http",
+									"host": [
+										"140",
+										"238",
+										"146",
+										"59"
+									],
+									"path": [
+										"api",
+										"v0",
+										"app",
+										"checkUser"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-zM34MxBsQ1Hk15V/6EaJBcRPOgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Mar 2023 07:19:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"user_present\": false\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Details",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{root_url}}api/auth/userDetails",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"auth",
+								"userDetails"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Check User",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "http://140.238.146.59/api/v0/app/checkUser",
+									"protocol": "http",
+									"host": [
+										"140",
+										"238",
+										"146",
+										"59"
+									],
+									"path": [
+										"api",
+										"v0",
+										"app",
+										"checkUser"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2a-zM34MxBsQ1Hk15V/6EaJBcRPOgY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 01 Mar 2023 07:19:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Success\",\n    \"user_present\": false\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Books",
+			"item": [
+				{
+					"name": "Add Book",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "Moby Dick",
+									"type": "text"
+								},
+								{
+									"key": "author",
+									"value": "Herman Melville",
+									"type": "text"
+								},
+								{
+									"key": "genre",
+									"value": "adventure",
+									"type": "text"
+								},
+								{
+									"key": "condition",
+									"value": "excellent",
+									"type": "text"
+								},
+								{
+									"key": "availability_status",
+									"value": "true",
+									"type": "text"
+								},
+								{
+									"key": "latitude",
+									"value": "12.955300",
+									"type": "text"
+								},
+								{
+									"key": "longitude",
+									"value": "77.699400",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/sayan/Downloads/mb.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{root_url}}api/books",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root_url}}api/books",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"books"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{root_url}}api/books",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"books"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 15 Oct 2024 09:00:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "199"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"uuid\": \"f4bceff9-3496-409c-a0f2-0cad4de871f3\",\n        \"title\": \"Test Book\",\n        \"author\": \"John Doe\",\n        \"genre\": \"horror\",\n        \"condition\": \"good\",\n        \"availability_status\": true,\n        \"owner\": \"475e71d5-aafa-4eee-acdd-cb591070df89\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "List books using id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root_url}}api/books/54ba8bee-ea60-40f5-956c-67f5acace04c",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"books",
+								"54ba8bee-ea60-40f5-956c-67f5acace04c"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List books using id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{root_url}}api/books/54ba8bee-ea60-40f5-956c-67f5acace04c",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"books",
+										"54ba8bee-ea60-40f5-956c-67f5acace04c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 15 Oct 2024 09:00:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"54ba8bee-ea60-40f5-956c-67f5acace04c\",\n    \"title\": \"Test Book 1\",\n    \"author\": \"William Buyers\",\n    \"genre\": \"horror\",\n    \"condition\": \"good\",\n    \"availability_status\": true,\n    \"owner\": \"475e71d5-aafa-4eee-acdd-cb591070df89\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get list of books added by a specific user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root_url}}api/books?userId=c9929330-9cdd-4f1e-a59d-fb1770b55f2c",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"books"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "c9929330-9cdd-4f1e-a59d-fb1770b55f2c"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List books using id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{root_url}}api/books/54ba8bee-ea60-40f5-956c-67f5acace04c",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"books",
+										"54ba8bee-ea60-40f5-956c-67f5acace04c"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 15 Oct 2024 09:00:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, PUT, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "205"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"uuid\": \"54ba8bee-ea60-40f5-956c-67f5acace04c\",\n    \"title\": \"Test Book 1\",\n    \"author\": \"William Buyers\",\n    \"genre\": \"horror\",\n    \"condition\": \"good\",\n    \"availability_status\": true,\n    \"owner\": \"475e71d5-aafa-4eee-acdd-cb591070df89\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Search Books",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root_url}}api/books/search?q=dick&latitude=12.9716&longitude=77.5946&available=true",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"books",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "dick"
+								},
+								{
+									"key": "latitude",
+									"value": "12.9716"
+								},
+								{
+									"key": "longitude",
+									"value": "77.5946"
+								},
+								{
+									"key": "available",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{root_url}}api/books/search?q=Mystery of the Blue Train&genre=mystery&latitude=12.9716&longitude=77.5946&available=true",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"books",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "Mystery of the Blue Train"
+										},
+										{
+											"key": "genre",
+											"value": "mystery"
+										},
+										{
+											"key": "latitude",
+											"value": "12.9716"
+										},
+										{
+											"key": "longitude",
+											"value": "77.5946"
+										},
+										{
+											"key": "available",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 15 Oct 2024 09:46:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"uuid\": \"73861923-5f8a-44dc-b5ea-bd61e4b81317\",\n            \"title\": \"Mystery of the Blue Train\",\n            \"author\": \"Agatha Christie\",\n            \"genre\": \"mystery\",\n            \"condition\": \"good\",\n            \"availability_status\": true,\n            \"latitude\": 12.9569,\n            \"longitude\": 77.7003,\n            \"owner\": \"d4876bc1-8fea-4653-9d79-92eef8037647\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Latest Books added by others",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root_url}}api/books/all",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"books",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Books",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{root_url}}api/books/search?q=Mystery of the Blue Train&genre=mystery&latitude=12.9716&longitude=77.5946&available=true",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"books",
+										"search"
+									],
+									"query": [
+										{
+											"key": "q",
+											"value": "Mystery of the Blue Train"
+										},
+										{
+											"key": "genre",
+											"value": "mystery"
+										},
+										{
+											"key": "latitude",
+											"value": "12.9716"
+										},
+										{
+											"key": "longitude",
+											"value": "77.5946"
+										},
+										{
+											"key": "available",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 15 Oct 2024 09:46:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "312"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 1,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"uuid\": \"73861923-5f8a-44dc-b5ea-bd61e4b81317\",\n            \"title\": \"Mystery of the Blue Train\",\n            \"author\": \"Agatha Christie\",\n            \"genre\": \"mystery\",\n            \"condition\": \"good\",\n            \"availability_status\": true,\n            \"latitude\": 12.9569,\n            \"longitude\": 77.7003,\n            \"owner\": \"d4876bc1-8fea-4653-9d79-92eef8037647\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update books using id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Good Book\",\r\n    \"author\": \"Alex\",\r\n    \"genre\": \"horror\",\r\n    \"condition\": \"bad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{root_url}}api/books/f4bceff9-3496-409c-a0f2-0cad4de871f3",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"books",
+								"f4bceff9-3496-409c-a0f2-0cad4de871f3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete books using id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{root_url}}api/books/54ba8bee-ea60-40f5-956c-67f5acace04c",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"books",
+								"54ba8bee-ea60-40f5-956c-67f5acace04c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Exchange Requests",
+			"item": [
+				{
+					"name": "Add Exchange Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"acceptor\": \"c9929330-9cdd-4f1e-a59d-fb1770b55f2c\",\r\n    \"initiator_book_id\": \"45056304-8206-46d1-a864-3063b39b0e50\",\r\n    \"acceptor_book_id\": \"1e7e688e-0605-455b-8b36-37bb3c81f876\",\r\n    \"delivery_method\": \"Courier\",\r\n    \"exchange_duration\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{root_url}}api/exchange_request",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"exchange_request"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Book Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"acceptor\": \"c9929330-9cdd-4f1e-a59d-fb1770b55f2c\",\r\n    \"initiator_book_id\": \"45056304-8206-46d1-a864-3063b39b0e50\",\r\n    \"acceptor_book_id\": \"1e7e688e-0605-455b-8b36-37bb3c81f876\",\r\n    \"delivery_method\": \"Courier\",\r\n    \"exchange_duration\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{root_url}}api/exchange_request",
+									"host": [
+										"{{root_url}}api"
+									],
+									"path": [
+										"exchange_request"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 15 Oct 2024 18:16:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.11.5"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "218"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"acceptor\": \"c9929330-9cdd-4f1e-a59d-fb1770b55f2c\",\n    \"initiator_book_id\": \"45056304-8206-46d1-a864-3063b39b0e50\",\n    \"acceptor_book_id\": \"1e7e688e-0605-455b-8b36-37bb3c81f876\",\n    \"delivery_method\": \"Courier\",\n    \"exchange_duration\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "Get my exchange requests",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root_url}}api/exchange_request",
+							"host": [
+								"{{root_url}}api"
+							],
+							"path": [
+								"exchange_request"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "Token {{user_id}}",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "root_url",
+			"value": "https://booktrade-backend-nine.vercel.app/",
+			"type": "string"
+		},
+		{
+			"key": "user_id",
+			"value": "1d30e54f926b7116124a56014af8eec62b6da901",
+			"type": "string"
+		}
+	]
+}
