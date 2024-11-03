@@ -247,5 +247,3 @@ curl -X POST {{root_url}}exchange_request \
 ```
 
 ---
-
-This documentation covers essential endpoints for user and book management with sample cURL requests. Each section provides request structure, descriptions, and parameters needed for successful API calls【6†source】.
